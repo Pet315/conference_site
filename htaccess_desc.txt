@@ -1,0 +1,6 @@
+AddDefaultCharset utf-8 # coding for files
+
+RewriteEngine on # config module
+RewriteCond %{REQUEST_FILENAME} !-f # if not file
+RewriteCond %{REQUEST_FILENAME} !-d # if not directory
+RewriteRule ^(.*)$ index.php # go to index.php
