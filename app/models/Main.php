@@ -13,8 +13,8 @@ class Main extends Model {
         $result = $this->db->all("DELETE from conferences WHERE id=".$id);
         return $result;
     }
-    public function getConfById($id) {
-        $result = $this->db->all("SELECT * FROM conferences WHERE id=".$id);
+    public function getConfById($id, $items='*') {
+        $result = $this->db->all("SELECT'.$items.' FROM conferences WHERE id=".$id);
         return $result;
     }
     public function saveConf($title, $date, $country, $address_latitude='NULL', $address_longitude='NULL') {

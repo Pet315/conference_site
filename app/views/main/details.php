@@ -26,21 +26,19 @@
 
 <body>
     <div>
-        <?php foreach ($conf as $val): ?>
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $val['title']; ?></h5>
-                    <p class="card-text"><?= $val['date']; ?></p>
+                    <h5 class="card-title"><?= $conf['title']; ?></h5>
+                    <p class="card-text"><?= $conf['date']; ?></p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item <?php if($val['address_latitude'] == NULL or $val['address_longitude'] == NULL) {echo 'd-none';} ?>">Address:<br><br>
+                    <li class="list-group-item <?php if($conf['address_latitude'] == NULL or $conf['address_longitude'] == NULL) {echo 'd-none';} ?>">Address:<br><br>
                         <div id="map-container-google" class="z-depth-1-half map-container">
-                            <iframe src="https://maps.google.com/maps?q=<?=$val['address_latitude']?>,<?=$val['address_longitude']?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                            <iframe src="https://maps.google.com/maps?q=<?=$conf['address_latitude']?>,<?=$conf['address_longitude']?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
                                     style="border:0" allowfullscreen></iframe>
                         </div>
-                    <li class="list-group-item">Country: <?= $val['country']; ?></li>
-<!--                    <li class="list-group-item">Contacts: --><?//= $val['contacts']; ?><!--</li>-->
+                    <li class="list-group-item">Country: <?= $conf['country']; ?></li>
                 </ul>
                 <div class="card-body">
                     <div class="btn-group me-2">
@@ -48,13 +46,12 @@
                     </div>
                     <div class="btn-group">
                         <form action='/conference_site/deleted' method='post'>
-                            <input type='hidden' name='del' value="<?= $val['id']; ?>" />
+                            <input type='hidden' name='del' value="<?= $conf['id']; ?>" />
                             <input type='submit' class="btn btn-danger" value='Delete'>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <?php endforeach; ?>
     </div>
 </body>

@@ -1,5 +1,11 @@
 <head>
     <style>
+        .error {
+            color: red;
+            text-align: left;
+            padding: 0;
+            margin-bottom: 1em;
+        }
         .card {
             border-color: #1C0878;
             color: #1C0878;
@@ -11,6 +17,7 @@
 </head>
 
 <body>
+    <h4 class="error"><?php if($err != '') { echo $err; }?></h4>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
         <?php foreach ($confs as $val): ?>
         <div class="col">
@@ -32,7 +39,7 @@
                     </div>
                     <div class="btn-group">
                         <form action='/conference_site/deleted' method='post'>
-                            <input type='hidden' name='del' value="<?= $val['id']; ?>" />
+                            <input type='hidden' name='id' value="<?= $val['id']; ?>" />
                             <input type='submit' class="btn btn-danger" value='Delete'>
                         </form>
                     </div>
