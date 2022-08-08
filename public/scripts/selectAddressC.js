@@ -6,8 +6,8 @@ function updateCoordinates(lat, lng) {
 function initMap() {
     var map, marker;
     var myLatlng = {
-        lat: 55.74,
-        lng: 37.63
+        lat: 50.43,
+        lng: 30.55
     };
     document.getElementById('lat').value = myLatlng.lat;
     document.getElementById('lng').value = myLatlng.lng;

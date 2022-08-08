@@ -9,7 +9,6 @@
 
     <!--    Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
     <!--    Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon.png">
@@ -62,8 +61,8 @@
         <h4 class="title"><?= $title?></h4>
         <?= $content?>
     </div>
-    <br><br><br>
 
+    <br><br><br>
     <a name="contacts"></a>
     <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -73,7 +72,7 @@
                         <h6 class="text-uppercase">Email</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-dark">info@worldconferencealerts.com</a>
+                                <a href="#" class="text-dark">info@worldconferencealerts.com</a>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +81,7 @@
                         <h6 class="text-uppercase">Phone number</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-dark">+91 89250 317834</a>
+                                <a href="#" class="text-dark">+91 89250 317834</a>
                             </li>
                         </ul>
                     </div>
@@ -90,7 +89,7 @@
                         <h6 class="text-uppercase">Telegram</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-dark">@wc_alerts_bot</a>
+                                <a href="#" class="text-dark">@wc_alerts_bot</a>
                             </li>
                         </ul>
                     </div>
@@ -99,7 +98,7 @@
 
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-dark">@world_conf_alerts</a>
+                                <a href="#" class="text-dark">@world_conf_alerts</a>
                             </li>
                         </ul>
                     </div>

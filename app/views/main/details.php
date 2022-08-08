@@ -29,27 +29,20 @@
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $conf['title']; ?></h5>
-                    <p class="card-text"><?= $conf['date']; ?></p>
+                    <h5 class="card-title"><?= htmlspecialchars($conf['title']); ?></h5>
+                    <p class="card-text"><?= htmlspecialchars($conf['date']); ?></p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item <?php if($conf['address_latitude'] == NULL or $conf['address_longitude'] == NULL) {echo 'd-none';} ?>">Address:<br><br>
                         <div id="map-container-google" class="z-depth-1-half map-container">
-                            <iframe src="https://maps.google.com/maps?q=<?=$conf['address_latitude']?>,<?=$conf['address_longitude']?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                            <iframe src="https://maps.google.com/maps?q=<?=htmlspecialchars($conf['address_latitude'])?>,<?=htmlspecialchars($conf['address_longitude'])?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
                                     style="border:0" allowfullscreen></iframe>
                         </div>
-                    <li class="list-group-item">Country: <?= $conf['country']; ?></li>
+                    <li class="list-group-item">Country: <?= htmlspecialchars($conf['country']); ?></li>
                 </ul>
                 <div class="card-body">
-                    <div class="btn-group me-2">
-                        <a href="/conference_site" class="btn btn-primary">Back</a>
-                    </div>
-                    <div class="btn-group">
-                        <form action='/conference_site/deleted' method='post'>
-                            <input type='hidden' name='del' value="<?= $conf['id']; ?>" />
-                            <input type='submit' class="btn btn-danger" value='Delete'>
-                        </form>
-                    </div>
+                    <a href="/conference_site" class="btn btn-primary me-2">Back</a>
+                    <a href="/conference_site/index?id=<?= $conf['id']?>" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>

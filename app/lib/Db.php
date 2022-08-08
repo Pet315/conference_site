@@ -17,7 +17,7 @@ class Db {
         $stmt = $this->db->prepare($sql);
         if (!empty($params)) {
             foreach ($params as $key => $val) {
-                $stmt->bindValue(':'.$key, $val); //sql injections secure
+                $stmt->bindValue(':'.$key, $val);
             }
         }
         $stmt->execute();

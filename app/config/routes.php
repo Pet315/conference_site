@@ -19,5 +19,11 @@ return [
     'conference_site/create' => [
         'controller' => 'main',
         'action' => 'create',
-    ]
+    ],
+
+    'conference_site/saved' => [
+        'controller' => 'main',
+        'action' => 'index',
+    ],
+
 ];

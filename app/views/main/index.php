@@ -21,30 +21,18 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
         <?php foreach ($confs as $val): ?>
         <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $val['title']; ?></h5>
-                    <p class="card-text"><?= $val['date']; ?></p>
-                    <div class="btn-group me-2">
-                        <form action='/conference_site/details' method='post'>
-                            <input type='hidden' name='id' value="<?= $val['id']; ?>" />
-                            <input type='submit' class="btn btn-primary" value='Details'>
-                        </form>
+            <a href="/conference_site/details?id=<?= $val['id']?>" style="text-decoration: none; color: #1C0878">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= htmlspecialchars($val['title']); ?></h5>
+                        <p class="card-text"><?= htmlspecialchars($val['date']); ?></p>
                     </div>
-                    <div class="btn-group me-2">
-                        <form action='/conference_site/edit' method='post'>
-                            <input type='hidden' name='id' value="<?= $val['id']; ?>" />
-                            <input type='submit' class="btn btn-secondary" value='Edit'>
-                        </form>
-                    </div>
-                    <div class="btn-group">
-                        <form action='/conference_site/deleted' method='post'>
-                            <input type='hidden' name='id' value="<?= $val['id']; ?>" />
-                            <input type='submit' class="btn btn-danger" value='Delete'>
-                        </form>
+                    <div class="card-body">
+                        <a href="/conference_site/edit?id=<?= $val['id']?>" class="btn btn-primary me-2">Edit</a>
+                        <a href="/conference_site/index?id=<?= $val['id']?>" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
         <?php endforeach; ?>
     </div>
