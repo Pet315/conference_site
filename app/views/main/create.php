@@ -4,8 +4,8 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <!--    JS local files-->
-    <script src="public/scripts/selectCountry.js"></script>
-    <script src="public/scripts/selectAddressC.js"></script>
+    <script src="public/scripts/countryCreate.js"></script>
+    <script src="public/scripts/addressCreate.js"></script>
 
     <style>
         #map {
@@ -61,5 +61,5 @@
     </form>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbz9SsxmvvV-mXRkRGTH8F4cENndiecOk&libraries=places&callback=initMap"></script>
-    <script src="public/scripts/selectDate.js"></script>
+    <script src="public/scripts/dateCreate.js"></script>
 </body>

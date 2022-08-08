@@ -20,11 +20,17 @@ class View {
             $content = ob_get_clean();
             require 'app/views/layouts/'.$this->layout.'.php';
         } else {
-            echo 'No view';
+            $this->error();
         }
     }
 
-    public function message($status, $message) {
-        exit(json_encode(['status' => $status, 'message' => $message]));
+    public function error($title='Page not found') {
+        ob_start();
+        $content = '';
+        require 'app/views/layouts/'.$this->layout.'.php';
     }
+
+//    public function message($status, $message) {
+//        exit(json_encode(['status' => $status, 'message' => $message]));
+//    }
 }

@@ -12,8 +12,8 @@ return [
     ],
 
     'conference_site/edit' => [
-    'controller' => 'main',
-    'action' => 'edit',
+        'controller' => 'main',
+        'action' => 'edit',
     ],
 
     'conference_site/create' => [

@@ -44,7 +44,7 @@ class Router {
                 echo "Controller not found: " . $path;
             }
         } else {
-            echo 'No route';
+            echo "Page not found: ";
         }
     }
 

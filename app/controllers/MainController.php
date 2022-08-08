@@ -50,7 +50,7 @@ class MainController extends Controller  {
             ];
             $this->view->render('Details of conference', $vars);
         } else {
-            echo 'No route';
+            $this->view->error();
         }
 
     }
@@ -63,7 +63,7 @@ class MainController extends Controller  {
             ];
             $this->view->render('Edit conference', $vars);
         } else {
-            echo 'No route';
+            $this->view->error();
         }
     }
 

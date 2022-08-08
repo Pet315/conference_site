@@ -11,10 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!--    Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon/favicon-16x16.png">
-    <link rel="manifest" href="public/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon_data/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon_data/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon_data/favicon-16x16.png">
+    <link rel="manifest" href="public/favicon_data/site.webmanifest">
 
     <style>
         .title {
@@ -30,12 +30,12 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1C0878">
         <div class="container">
             <a class="navbar-brand p-0" href="/conference_site">
-                <img src="public/images/WC.png" alt="WC" width="90">
+                <img src="public/images/CA.png" alt="CA" width="90">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/conference_site">World Conference alerts</a>
+            <a class="navbar-brand" href="/conference_site">Conference alerts</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -60,11 +60,12 @@
     <div class="container my-5">
         <h4 class="title"><?= $title?></h4>
         <?= $content?>
+        <?php if($content == '') {echo '<br><br><br>';} ?>
     </div>
 
     <br><br><br>
     <a name="contacts"></a>
-    <footer class="bg-light text-center text-lg-start">
+    <footer class="text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             <div class="container p-4">
                 <div class="row">
@@ -72,7 +73,7 @@
                         <h6 class="text-uppercase">Email</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#" class="text-dark">info@worldconferencealerts.com</a>
+                                <a href="#" class="text-dark">info@conferencealerts.com</a>
                             </li>
                         </ul>
                     </div>
@@ -89,7 +90,7 @@
                         <h6 class="text-uppercase">Telegram</h6>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#" class="text-dark">@wc_alerts_bot</a>
+                                <a href="#" class="text-dark">@c_alerts_bot</a>
                             </li>
                         </ul>
                     </div>
@@ -98,14 +99,14 @@
 
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#" class="text-dark">@world_conf_alerts</a>
+                                <a href="#" class="text-dark">@conf_alerts</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <br>© 2022 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDB</a>
+            <a class="text-dark" href="#">MDB</a>
         </div>
     </footer>
 </body>
