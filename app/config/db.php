@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'host' => 'localhost',
-    'name' => 'conference_site',
-    'user' => 'root',
+    'host' => '',
+    'name' => '',
+    'user' => '',
     'password' => '',
 ];
