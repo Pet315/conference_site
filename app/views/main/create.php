@@ -60,6 +60,6 @@
         </div>
     </form>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbz9SsxmvvV-mXRkRGTH8F4cENndiecOk&libraries=places&callback=initMap"></script>
+    <script src=""></script>
     <script src="public/scripts/dateCreate_.js"></script>
 </body>
