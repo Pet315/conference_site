@@ -8,8 +8,13 @@ class MainController extends Controller  {
     public function indexAction() {
         $error='';
 
-        if (isset($_GET['id']) and ctype_digit($_GET['id'])) {
-            $this->model->deleteConf($_GET['id']);
+        if (isset($_GET['id'])) {
+            if (ctype_digit($_GET['id'])) {
+                $this->model->deleteConf($_GET['id']);
+            } else {
+                $this->view->error();
+                exit();
+            }
         }
 
         if (isset($_POST['save'])) {

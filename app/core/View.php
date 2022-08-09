@@ -4,7 +4,6 @@ namespace app\core;
 
 class View {
     public $path;
-    public $layout = 'default';
 
     public function __construct($route) {
         $this->route = $route;
@@ -18,7 +17,7 @@ class View {
             ob_start();
             require $path;
             $content = ob_get_clean();
-            require 'app/views/layouts/'.$this->layout.'.php';
+            require 'app/views/layout.php';
         } else {
             $this->error();
         }
@@ -27,7 +26,15 @@ class View {
     public function error($title='Page not found') {
         ob_start();
         $content = '';
-        require 'app/views/layouts/'.$this->layout.'.php';
+        require 'app/views/layout.php';
+        exit();
+    }
+
+    public static function errorDefine($title='Page not found') {
+        ob_start();
+        $content = '';
+        require 'app/views/layout.php';
+        exit();
     }
 
 //    public function message($status, $message) {

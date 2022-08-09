@@ -62,5 +62,5 @@
     </form>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbz9SsxmvvV-mXRkRGTH8F4cENndiecOk&libraries=places&callback=initMap"></script>
-    <script src="public/scripts/dateEdit.js"></script>
+    <script src="public/scripts/dateEdit_.js"></script>
 </body>

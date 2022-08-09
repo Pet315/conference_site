@@ -38,13 +38,13 @@ class Router {
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Action not found: ' . $action;
+                    View::errorDefine();
                 }
             } else {
-                echo "Controller not found: " . $path;
+                View::errorDefine();
             }
         } else {
-            echo "Page not found: ";
+            View::errorDefine();
         }
     }
 
